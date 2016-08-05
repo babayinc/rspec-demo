@@ -8,8 +8,18 @@ describe Hero do
   end
 
   it "cam power up" do
-    hero = Hero.new 'mike'
+    hero = Hero.new 'Mike'
     expect(hero.power_up).to eq 110
+  end
+
+  it "cam power down" do
+    hero = Hero.new 'Mike'
+    expect(hero.power_down).to eq 90
+  end
+
+  it "displays full hero info" do
+    hero = Hero.new 'Mike'
+    expect(hero.hero_info).to eq 'Mike has health of 100'
   end
 
 end
